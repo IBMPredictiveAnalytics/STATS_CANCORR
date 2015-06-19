@@ -1,0 +1,247 @@
+#/***********************************************************************
+# * Licensed Materials - Property of IBM 
+# *
+# * IBM SPSS Products: Statistics Common
+# *
+# * (C) Copyright IBM Corp. 1989, 2014
+# *
+# * US Government Users Restricted Rights - Use, duplication or disclosure
+# * restricted by GSA ADP Schedule Contract with IBM Corp. 
+# ************************************************************************/
+
+# NLS_ENCODING=UTF-8
+# IBMUPYTH
+
+
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR ORGANIZATION
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"POT-Creation-Date: 2014-05-21 17:51+China Standard Time\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: ENCODING\n"
+"Generated-By: pygettext.py 1.5\n"
+
+
+#: STATS_CANCORR.py:134
+msgid "String variables are not allowed in this procedure"
+msgstr ""
+"In questa procedura non sono consentite variabili stringa"
+
+#: STATS_CANCORR.py:137
+msgid "The two sets of variables have variables in common: %s"
+msgstr ""
+"I due insiemi di variabili hanno variabili in comune: %s"
+
+#: STATS_CANCORR.py:139
+msgid "A root name for output variables is required if computing scores or saving syntax"
+msgstr ""
+"Un nome radice per le variabili di output è obbligatorio se si sta calcolando il punteggio o salvando la sintassi "
+
+#: STATS_CANCORR.py:141
+msgid "A name for the centered dataset is required if scoring or creating scoring syntax"
+msgstr ""
+"Un nome per il dataset centrato è obbligatorio se si sta calcolando il punteggio o creando la sintassi per il calcolo del punteggio"
+
+#: STATS_CANCORR.py:178
+msgid "A scoring variable name appears in the list of input variables"
+msgstr ""
+"Un nome di variabile per il calcolo del punteggio compare nell'elenco di variabili di input "
+
+#: STATS_CANCORR.py:195
+msgid ""
+"* Calculate canonical scores based on canonical correlations.\n"
+msgstr ""
+"* Calcolare punteggi canonici in base alle correlazioni canoniche.\n"
+
+#: STATS_CANCORR.py:403
+msgid "The requested canonical correlations could not be computed due to singularity or missing data."
+msgstr ""
+"Le correlazioni canoniche richieste non sono state calcolate a causa della singolarità o di dati mancanti. "
+
+#: STATS_CANCORR.py:418
+msgid "Centered Dataset"
+msgstr ""
+"Dataset centrato"
+
+#: STATS_CANCORR.py:418
+msgid "Set 1 Variables"
+msgstr ""
+"Insieme 1 di variabili"
+
+#: STATS_CANCORR.py:418
+msgid "Set 2 Variables"
+msgstr ""
+"Insieme 2 di variabili"
+
+#: STATS_CANCORR.py:419
+msgid "Correlations Used for Scoring"
+msgstr ""
+"Correlazioni utilizzate per il calcolo del punteggio"
+
+#: STATS_CANCORR.py:419
+msgid "Scoring Syntax"
+msgstr ""
+"Sintassi per il calcolo del punteggio "
+
+#: STATS_CANCORR.py:421 STATS_CANCORR.py:422
+msgid "None"
+msgstr ""
+"Nessuno"
+
+#: STATS_CANCORR.py:424
+msgid "Canonical Correlations Settings"
+msgstr ""
+"Impostazioni correlazioni canoniche"
+
+#: STATS_CANCORR.py:425
+msgid "Values"
+msgstr ""
+"Valori"
+
+#: STATS_CANCORR.py:428
+msgid "Canonical Correlations"
+msgstr ""
+"Correlazioni canoniche"
+
+#: STATS_CANCORR.py:429
+msgid "H0 for Wilks test is that the correlations in the current and following rows are zero"
+msgstr ""
+"H0 per il test di Wilks significa che le correlazioni nella riga corrente e in quelle che seguono sono zero"
+
+#: STATS_CANCORR.py:441
+msgid "Correlation"
+msgstr ""
+"Correlazione"
+
+#: STATS_CANCORR.py:441
+msgid "Eigenvalue"
+msgstr ""
+"Autovalore"
+
+#: STATS_CANCORR.py:442
+msgid "Denom D.F."
+msgstr ""
+"G.L. denominatore"
+
+#: STATS_CANCORR.py:442
+msgid "F"
+msgstr ""
+"F"
+
+#: STATS_CANCORR.py:442
+msgid "Num D.F"
+msgstr ""
+"G.L. numeratore"
+
+#: STATS_CANCORR.py:442
+msgid "Wilks Statistic"
+msgstr ""
+"Statistica di Wilks"
+
+#: STATS_CANCORR.py:443
+msgid "Sig."
+msgstr ""
+"Sign."
+
+#: STATS_CANCORR.py:447
+msgid "Set 1 Standardized Canonical Correlation Coefficients"
+msgstr ""
+"Insieme 1 di coefficienti di correlazione canonica standardizzati"
+
+#: STATS_CANCORR.py:448 STATS_CANCORR.py:454 STATS_CANCORR.py:460
+#: STATS_CANCORR.py:465 STATS_CANCORR.py:472 STATS_CANCORR.py:478
+#: STATS_CANCORR.py:485 STATS_CANCORR.py:491
+msgid "Variable"
+msgstr ""
+"Variabile"
+
+#: STATS_CANCORR.py:453
+msgid "Set 2 Standardized Canonical Correlation Coefficients"
+msgstr ""
+"Insieme 2 di coefficienti di correlazione canonica standardizzati"
+
+#: STATS_CANCORR.py:459
+msgid "Set 1 Unstandardized Canonical Correlation Coefficients"
+msgstr ""
+"Insieme 1 di coefficienti di correlazione canonica non standardizzati"
+
+#: STATS_CANCORR.py:464
+msgid "Set 2 Unstandardized Canonical Correlation Coefficients"
+msgstr ""
+"Insieme 2 di coefficienti di correlazione canonica non standardizzati"
+
+#: STATS_CANCORR.py:470
+msgid "Set 1 Canonical Loadings"
+msgstr ""
+"Insieme 1 di caricamenti canonici"
+
+#: STATS_CANCORR.py:476
+msgid "Set 2 Canonical Loadings"
+msgstr ""
+"Insieme 2 di caricamenti canonici"
+
+#: STATS_CANCORR.py:483
+msgid "Set 1 Cross Loadings"
+msgstr ""
+"Insieme 1 di caricamenti incrociati"
+
+#: STATS_CANCORR.py:489
+msgid "Set 2 Cross Loadings"
+msgstr ""
+"Insieme 2 di caricamenti incrociati"
+
+#: STATS_CANCORR.py:496
+msgid "Proportion of Variance Explained"
+msgstr ""
+"Proporzione della varianza spiegata"
+
+#: STATS_CANCORR.py:498
+msgid "Canonical Variable"
+msgstr ""
+"Variabile canonica"
+
+#: STATS_CANCORR.py:500
+msgid "Set 1 by Self"
+msgstr ""
+"Insieme 1 in base a sé stesso"
+
+#: STATS_CANCORR.py:500
+msgid "Set 1 by Set 2"
+msgstr ""
+"Insieme 1 in base a Insieme 2"
+
+#: STATS_CANCORR.py:501
+msgid "Set 2 by Self"
+msgstr ""
+"Insieme 2 in base a sé stesso"
+
+#: STATS_CANCORR.py:501
+msgid "Set 2 by Set 1"
+msgstr ""
+"Insieme 2 in base a Insieme 1"
+
+#: STATS_CANCORR.py:546
+msgid "The specified root name is too long: %s"
+msgstr ""
+"Il nome radice specificato è troppo lungo: %s"
+
+#: STATS_CANCORR.py:582
+msgid "---"
+msgstr ""
+"---"
+
+#: STATS_CANCORR.py:634
+msgid "Create dummy variables"
+msgstr ""
+"Crea variabili dummy"
+
+
+
