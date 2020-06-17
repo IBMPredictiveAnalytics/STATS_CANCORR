@@ -2,15 +2,16 @@ Name: STATS CANCORR
 Dialog-Specs: STATS_CANCORR.spd
 Command-Specs: STATS_CANCORR.xml
 Code-Files: STATS_CANCORR.py
-Misc-Files: markdown.html,extsyntax.css,IBMdialogicon.png
+Misc-Files: extsyntax.css,IBMdialogicon.png,markdown.html
 Summary: Calculate canonical correlations
 Description: This procedures computes canonical correlations for two s
  ets of variables.  It can create scores, and it can produce a syntax 
  file that can be used to score other datasets with the same variable 
  names.
 Author: JKP, IBM SPSS
-Version: 1.0.5
-Product-Version: 18
+Version: 2.0.0
+Product-Version: 24
 Date: 6/10/2013
 Plugins: Python
+Python-Version: 3
 Translation-Catalogues: lang

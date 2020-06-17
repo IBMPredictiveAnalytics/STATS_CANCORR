@@ -3,13 +3,14 @@
 # *
 # * IBM SPSS Products: Statistics Common
 # *
-# * (C) Copyright IBM Corp. 2014
+# * (C) Copyright IBM Corp. 1989, 2020
 # *
 # * US Government Users Restricted Rights - Use, duplication or disclosure
-# * restricted by GSA ADP Schedule Contract with IBM Corp. 
-# ************************************************************************/
+# * restricted by GSA ADP Schedule Contract with IBM Corp.
+# ************************************************************************/"""Partial Least Squares Regression Module"""
 
-from __future__ import with_statement
+
+
 import random, os, tempfile, textwrap
 
 """STATS CANCORR extension command"""
@@ -556,7 +557,7 @@ def buildsyntax(root, setn, setvars, data, ndims):
 def Run(args):
     """Execute the STATS CANCORR extension command"""
 
-    args = args[args.keys()[0]]
+    args = args[list(args.keys())[0]]
 
     oobj = Syntax([
         Template("SET1", subc="",  ktype="existingvarlist", var="set1", islist=True),
@@ -584,7 +585,7 @@ def Run(args):
         def _(msg):
             return msg
     # A HELP subcommand overrides all else
-    if args.has_key("HELP"):
+    if "HELP" in args:
         #print helptext
         helper()
     else:
@@ -604,7 +605,7 @@ def helper():
     # webbrowser.open seems not to work well
     browser = webbrowser.get()
     if not browser.open_new(helpspec):
-        print("Help file not found:" + helpspec)
+        print(("Help file not found:" + helpspec))
 try:    #override
     from extension import helper
 except:
@@ -671,7 +672,7 @@ class NonProcPivotTable(object):
 def attributesFromDict(d):
     """build self attributes from a dictionary d."""
     self = d.pop('self')
-    for name, value in d.iteritems():
+    for name, value in d.items():
         setattr(self, name, value)
 
 def StartProcedure(procname, omsid):
