@@ -1,0 +1,71 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Calcul de corrélations canoniques</title>
+<STYLE TYPE="text/css"> 
+<!-- 
+
+H1 {font-weight:bold; color:#006699; font-size:125%; }
+H2 {font-weight:bold; color:#006699; font-size:110%; }
+BODY {font-size:80%; }
+TABLE {font-size:100%;}
+
+/* paragraph tags */
+.step {text-indent: -1.3em; margin-left:1.3em; margin-top: 0px;}
+.step-glyph {  }
+.menuselection {margin-left:10px}
+.bullet {list-style-type: disc;margin-top:12px; margin-left:36px; text-indent:-1em; }
+.codeblock {background-color: #ffffe6; display:block; margin-left:5px; padding:5px; }
+
+/* inline tags */
+.code {}                           /*** used to tag pieces of code (syntax, Python, R, HTML, etc.)   ***/
+.screen {font-weight:bold; color:#408080}                       /*** used refer to on-screen text ***/
+.name {font-style: italic}                                                       /*** used to tag names, such as variable names, file names, and so forth ***/
+.runinhead {font-weight: bold} 
+.superscript {vertical-align:super; font-size:80%}
+.subscript {vertical-align:sub; font-size:80%}
+.symbol {}
+
+--> 
+</STYLE>
+</head>
+<body>
+<h1>Calcul de corrélations canoniques</h1>
+Cette procédure calcule les corrélations canoniques et les statistiques associées pour deux ensembles de variables.  Elle peut éventuellement calculer le score des données et générer un fichier de syntaxe utilisable avec de nouvelles données.
+<p>
+
+<p><span class="runinhead">Ensemble 1 :</span>
+Sélectionnez le premier ensemble de variables pour les corrélations.
+</p>
+<p><span class="runinhead">Ensemble 2 :</span>
+Sélectionnez le deuxième ensemble de variables pour les corrélations.
+</p>
+
+<h2>Options</h2>
+<p>Cette boîte de dialogue détermine les éléments de sortie ainsi que le comportement de calcul du score.</p>
+
+<p><span class="runinhead">Nom de racine pour les variables de score :</span> Attribuez un préfixe au nom des variables de score générées.
+<p class="bullet">&bull; Si l'option de calcul du score ou de création d'un fichier de score est sélectionnée, le nom de racine est obligatoire.</p>
+<p><span class="runinhead">Scores :</span> Cochez cette case et indiquez un nom de jeu de données afin de créer un jeu de données des scores.
+Le jeu de données contiendra les variables centrées et les scores.</p>
+<p><span class="runinhead">Fichier de syntaxe pour le calcul du score :</span> Cochez cette case et sélectionnez une spécification de fichier de sortie afin de créer un fichier de syntaxe qui contient les commandes de calcul du score d'un jeu de données.  La syntaxe centre les données, puis calcule les scores pour les deux ensembles de variables.</p>
+<p class="bullet">&bull; La syntaxe attend les mêmes noms de variables que ceux utilisés pour le calcul des corrélations.
+
+<p><span class="runinhead">Limite de dimensions pour le calcul du score :</span> Par défaut, toutes les corrélations sont utilisées pour le calcul du score.  Vous pouvez définir une limite inférieure en cochant cette case et en entrant le nombre de corrélations canoniques à utiliser.</p>
+
+<p><span class="runinhead">Affichage :</span> Cochez les cases correspondantes aux éléments de sortie souhaités.
+Les corrélations par paires sont les mêmes que celles obtenues par la procédure des corrélations avec suppression de la valeur manquante de l'observation incomplète.  Un tableau des corrélations et des tests est toujours généré.</p>
+
+<h2>Fonctions supplémentaires</h2>
+<p>
+Cette boîte de dialogue génère la syntaxe de la commande d'extension STATS CANCORR. Pour afficher l'aide sur la syntaxe de cette commande, exécutez la syntaxe suivante :
+</p>
+<p class="codeblock">STATS CANCORR /HELP.</p>
+
+<h2>Conditions requises</h2>
+Cette commande requiert Python Essentials.
+Vous pouvez le télécharger depuis le site Web de la communauté SPSS à l'adresse www.ibm.com/developerworks/spssdevcentral
+ou à partir de vos supports d'installation.
+

@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Extension debug="false" version="1.0" xmlns="http://spss.com/clementine/extensions" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://spss.com/clementine/extensions http://xml.spss.com/clementine/extensions/CLEFSpecificationFile.xsd">
+	<ExtensionDetails copyright="Licensed Materials - Property of IBM.  IBM SPSS Products: Statistics Common (C) Copyright IBM Corp. 1989, 2013.  US Government Users Restricted Rights - Use, duplication or  disclosure restricted by GSA ADP Schedule Contract with IBM Corp." description="" id="STATS_CANCORR" label="" provider="SPSS, Inc." providerTag="spss" version="1.0"/>
+	<Resources>
+		<Bundle id="bundle1" path="STATS_CANCORR" type="properties"/>
+	</Resources>
+	<CommonObjects>
+		<Actions>
+			<Action id="STATS_CANCORR_action" imagePath="IBMdialogicon.png" label="Canonical Correlation" labelKey="STATS_CANCORR_action.LABEL"/>
+		</Actions>
+	</CommonObjects>
+	<UserInterface>
+		<Controls>
+			<MenuItem action="STATS_CANCORR_action" offset="3" showIcon="true" spssMenu="Analyze.analyze_correlate"/>
+		</Controls>
+	</UserInterface>
+	<Node id="STATS_CANCORR" label="Canonical Correlation" labelKey="STATS_CANCORR.LABEL" type="modelBuilder">
+		<Properties>
+			<Property addOns="[Python]" name="STATS_CANCORR" syntax="STATS CANCORR %%set1%%   %%set2%%&#10;/OPTIONS  %%rootname%% %%Scores%% %%centeredds%% %%scoringsyntax%% %%ndim%%&#10;/PRINT %%pairwisecorr%% %%loadings%% %%varprop%% %%coefficients%%&#10;"/>
+			<Property description="false" name="STATS_CANCORR_modal"/>
+			<Property description="" descriptionKey="source_vars_tooltip.LABEL" isList="true" label="Variables:" labelKey="source_vars.LABEL" name="source_vars" selectionPool="source_fields" syntax="%%ThisValue%%" valueType="field"/>
+			<Property description="first set of variables to correlate with the second" descriptionKey="set1_tooltip.LABEL" isList="true" isRequired="true" label="Set 1:" labelKey="set1.LABEL" name="set1" selectionPool="source_fields" syntax="SET1=%%ThisValue%%" valueType="field"/>
+			<Property description="second set of variables" descriptionKey="set2_tooltip.LABEL" isList="true" isRequired="true" label="Set 2:" labelKey="set2.LABEL" name="set2" selectionPool="source_fields" syntax="SET2=%%ThisValue%%" valueType="field"/>
+			<Property description="" descriptionKey="Scores_tooltip.LABEL" label="Scores" labelKey="Scores.LABEL" name="Scores" syntax="%%ThisValue%%"/>
+			<Property defaultValue="false" description="" descriptionKey="item_16_tooltip.LABEL" label="Calculate scores" labelKey="item_16.LABEL" name="item_16" syntax="COMPUTECVARS=YES±COMPUTECVARS=NO" valueType="boolean"/>
+			<Property defaultValue="" description="" descriptionKey="centeredds_tooltip.LABEL" isRequired="true" label="Name for Scores Dataset:" labelKey="centeredds.LABEL" name="centeredds" syntax="CENTEREDDS=%%ThisValue%%" valueType="fieldName"/>
+			<Property defaultValue="" description="" descriptionKey="rootname_tooltip.LABEL" label="Rootname for Score Variables:" labelKey="rootname.LABEL" name="rootname" syntax="ROOTNAME=&quot;%%ThisValue%%&quot;" valueType="fieldName"/>
+			<Property description="" descriptionKey="scoringsyntax_tooltip.LABEL" label="Scoring Syntax File" labelKey="scoringsyntax.LABEL" name="scoringsyntax" syntax="%%ThisValue%%"/>
+			<Property defaultValue="false" description="" descriptionKey="item_21_tooltip.LABEL" label="Save syntax for scoring" labelKey="item_21.LABEL" name="item_21" syntax="%%ThisValue%%±" valueType="boolean"/>
+			<Property defaultValue="" description="" descriptionKey="filename_tooltip.LABEL" filename_filter="All File Types (*.*)|*.*|A^Syntax|*.sps|O^" isRequired="true" label="File:" labelKey="filename.LABEL" name="filename" syntax="SCORINGSYNTAX=%%ThisValue%%" valueType="string"/>
+			<Property description="" descriptionKey="display_tooltip.LABEL" label="Display" labelKey="display.LABEL" name="display" syntax="%%ThisValue%%"/>
+			<Property defaultValue="false" description="" descriptionKey="pairwisecorr_tooltip.LABEL" label="Pairwise Correlations" labelKey="pairwisecorr.LABEL" name="pairwisecorr" syntax="PAIRWISECORR=YES±PAIRWISECORR=NO" valueType="boolean"/>
+			<Property defaultValue="true" description="" descriptionKey="loadings_tooltip.LABEL" label="Loadings" labelKey="loadings.LABEL" name="loadings" syntax="LOADINGS=YES±LOADINGS=NO" valueType="boolean"/>
+			<Property defaultValue="true" description="" descriptionKey="varprop_tooltip.LABEL" label="Variance Proportions" labelKey="varprop.LABEL" name="varprop" syntax="VARPROP=YES±VARPROP=NO" valueType="boolean"/>
+			<Property defaultValue="true" description="" descriptionKey="coefficients_tooltip.LABEL" label="Coefficients" labelKey="coefficients.LABEL" name="coefficients" syntax="COEFFICIENTS=YES±COEFFICIENTS=NO" valueType="boolean"/>
+			<Property description="" descriptionKey="ndims_tooltip.LABEL" label="Scoring Dimension Limit" labelKey="ndims.LABEL" name="ndims" syntax="%%ThisValue%%"/>
+			<Property defaultValue="false" description="" descriptionKey="item_100_tooltip.LABEL" label="Limit Number of Dimensions Used for Scoring" labelKey="item_100.LABEL" name="item_100" syntax="%%ThisValue%%±" valueType="boolean"/>
+			<Property defaultValue="" description="" descriptionKey="ndim_tooltip.LABEL" label="Limit:" labelKey="ndim.LABEL" min="1" name="ndim" syntax="NDIMS=%%ThisValue%%" valueType="integer"/>
+		</Properties>
+		<SelectionPool id="source_fields" type="fields"/>
+		<UserInterface>
+			<Tabs>
+				<Tab helpLink="STATS_CANCORR.htm">
+					<PropertiesPanel>
+						<SourceFieldsBrowser copyFields="false" property="source_vars" selectionPool="source_fields" storage="[real integer date time string]">
+							<Layout columnWeight="1.0" fill="both" gridColumn="0" gridRow="0" gridWidth="1" rowWeight="1.0"/>
+						</SourceFieldsBrowser>
+						<MultiFieldChooserControl mnemonic="S" mnemonicKey="set1_mnemonic.VALUE" property="set1" storage="[real integer date time]" types="[orderedSet range]">
+							<Layout columnWeight="1.0" fill="both" gridColumn="2" gridRow="0" gridWidth="1" rowWeight="1.0"/>
+						</MultiFieldChooserControl>
+						<MultiFieldChooserControl mnemonic="E" mnemonicKey="set2_mnemonic.VALUE" property="set2" storage="[real integer date time]" types="[orderedSet range]">
+							<Layout columnWeight="1.0" fill="both" gridColumn="2" gridRow="1" gridWidth="1" rowWeight="1.0"/>
+						</MultiFieldChooserControl>
+						<StaticText text="This dialog box requires the\nPython Essentials" textKey="item_12.LABEL">
+							<Layout columnWeight="1.0" fill="none" gridColumn="0" gridRow="1" gridWidth="1" rowWeight="0.0"/>
+						</StaticText>
+						<PropertiesSubPanel buttonLabel="Options..." buttonLabelKey="optionsbutton.LABEL" dialogTitle="Options" dialogTitleKey="options.TITLE" helpLink="" mnemonic="O" mnemonicKey="optionsbutton_mnemonic.VALUE">
+							<Layout columnWeight="0.0" fill="none" gridColumn="3" gridRow="0" gridWidth="1" rowWeight="0.0"/>
+							<PropertiesPanel>
+								<PropertiesPanel id="Scores" label="Scores" labelKey="Scores.LABEL">
+									<Layout columnWeight="1.0" fill="both" gridColumn="0" gridRow="2" gridWidth="1" rowWeight="1.0"/>
+									<CheckBoxControl labelAbove="true" mnemonic="S" mnemonicKey="item_16_mnemonic.VALUE" property="item_16">
+										<Layout columnWeight="1.0" fill="none" gridColumn="0" gridRow="0" gridWidth="1" rowWeight="0.0"/>
+									</CheckBoxControl>
+									<TextBoxControl mnemonic="N" mnemonicKey="centeredds_mnemonic.VALUE" property="centeredds">
+										<Layout columnWeight="1.0" fill="horizontal" gridColumn="0" gridRow="1" gridWidth="1" leftIndent="8" rowWeight="1.0"/>
+									</TextBoxControl>
+								</PropertiesPanel>
+								<TextBoxControl mnemonic="R" mnemonicKey="rootname_mnemonic.VALUE" property="rootname">
+									<Layout columnWeight="1.0" fill="horizontal" gridColumn="0" gridRow="0" gridWidth="1" rowWeight="0.0"/>
+								</TextBoxControl>
+								<StaticText text="A rootname is required if calculating scores or\nsaving a scoring syntax file" textKey="item_19.LABEL">
+									<Layout columnWeight="1.0" fill="none" gridColumn="0" gridRow="1" gridWidth="1" rowWeight="0.0"/>
+								</StaticText>
+								<PropertiesPanel id="scoringsyntax" label="Scoring Syntax File" labelKey="scoringsyntax.LABEL">
+									<Layout columnWeight="1.0" fill="both" gridColumn="0" gridRow="3" gridWidth="1" rowWeight="1.0"/>
+									<CheckBoxControl labelAbove="true" mnemonic="V" mnemonicKey="item_21_mnemonic.VALUE" property="item_21">
+										<Layout columnWeight="1.0" fill="none" gridColumn="0" gridRow="0" gridWidth="1" rowWeight="0.0"/>
+									</CheckBoxControl>
+									<ServerFileChooserControl mode="save" property="filename">
+										<Layout columnWeight="1.0" fill="horizontal" gridColumn="0" gridRow="1" gridWidth="1" leftIndent="8" rowWeight="1.0"/>
+									</ServerFileChooserControl>
+								</PropertiesPanel>
+								<PropertiesPanel id="display" label="Display" labelKey="display.LABEL">
+									<Layout columnWeight="1.0" fill="both" gridColumn="1" gridRow="0" gridWidth="1" rowWeight="1.0"/>
+									<CheckBoxControl mnemonic="P" mnemonicKey="pairwisecorr_mnemonic.VALUE" property="pairwisecorr">
+										<Layout columnWeight="1.0" fill="none" gridColumn="0" gridRow="0" gridWidth="1" rowWeight="0.0"/>
+									</CheckBoxControl>
+									<CheckBoxControl mnemonic="L" mnemonicKey="loadings_mnemonic.VALUE" property="loadings">
+										<Layout columnWeight="1.0" fill="none" gridColumn="0" gridRow="1" gridWidth="1" rowWeight="0.0"/>
+									</CheckBoxControl>
+									<CheckBoxControl mnemonic="A" mnemonicKey="varprop_mnemonic.VALUE" property="varprop">
+										<Layout columnWeight="1.0" fill="none" gridColumn="0" gridRow="2" gridWidth="1" rowWeight="0.0"/>
+									</CheckBoxControl>
+									<CheckBoxControl mnemonic="F" mnemonicKey="coefficients_mnemonic.VALUE" property="coefficients">
+										<Layout columnWeight="1.0" fill="none" gridColumn="0" gridRow="3" gridWidth="1" rowWeight="1.0"/>
+									</CheckBoxControl>
+								</PropertiesPanel>
+								<PropertiesPanel id="ndims" label="Scoring Dimension Limit" labelKey="ndims.LABEL">
+									<Layout columnWeight="1.0" fill="both" gridColumn="0" gridRow="4" gridWidth="1" rowWeight="1.0"/>
+									<CheckBoxControl labelAbove="true" mnemonic="T" mnemonicKey="item_100_mnemonic.VALUE" property="item_100">
+										<Layout columnWeight="1.0" fill="none" gridColumn="0" gridRow="0" gridWidth="1" rowWeight="0.0"/>
+									</CheckBoxControl>
+									<TextBoxControl mnemonic="M" mnemonicKey="ndim_mnemonic.VALUE" property="ndim">
+										<Layout columnWeight="1.0" fill="horizontal" gridColumn="0" gridRow="1" gridWidth="1" leftIndent="8" rowWeight="1.0"/>
+									</TextBoxControl>
+								</PropertiesPanel>
+							</PropertiesPanel>
+						</PropertiesSubPanel>
+						<StaticText text="This dialog was created using a later version of PASW Statistics\nand certain features may not function as intended." textKey="v17_warning.LABEL">
+							<Layout columnWeight="1.0" fill="horizontal" gridColumn="0" gridRow="2" gridWidth="1" rowWeight="1.0"/>
+						</StaticText>
+					</PropertiesPanel>
+				</Tab>
+			</Tabs>
+		</UserInterface>
+	</Node>
+</Extension>

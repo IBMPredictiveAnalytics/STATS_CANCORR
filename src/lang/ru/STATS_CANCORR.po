@@ -1,247 +1,158 @@
-#/***********************************************************************
-# * Licensed Materials - Property of IBM 
-# *
-# * IBM SPSS Products: Statistics Common
-# *
-# * (C) Copyright IBM Corp. 1989, 2014
-# *
-# * US Government Users Restricted Rights - Use, duplication or disclosure
-# * restricted by GSA ADP Schedule Contract with IBM Corp. 
-# ************************************************************************/
-
-# NLS_ENCODING=UTF-8
-# IBMUPYTH
-
-
-# SOME DESCRIPTIVE TITLE.
-# Copyright (C) YEAR ORGANIZATION
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# Translations template for PROJECT.
+# Copyright (C) 2021 ORGANIZATION
+# This file is distributed under the same license as the PROJECT project.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2021.
 #
+
 msgid ""
 msgstr ""
-"Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2014-05-21 17:51+China Standard Time\n"
+"Project-Id-Version: PROJECT VERSION\n"
+"Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
+"POT-Creation-Date: 2021-10-11 00:54-0700\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
-"Content-Transfer-Encoding: ENCODING\n"
-"Generated-By: pygettext.py 1.5\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Globalization Pipeline\n"
 
-
-#: STATS_CANCORR.py:134
 msgid "String variables are not allowed in this procedure"
-msgstr ""
-"В этой процедуре не допускается использование текстовых переменных"
+msgstr "В этой процедуре не допускается использование текстовых переменных"
 
-#: STATS_CANCORR.py:137
 msgid "The two sets of variables have variables in common: %s"
-msgstr ""
-"У двух наборов переменных есть общие переменные: %s"
+msgstr "У двух наборов переменных есть общие переменные: %s"
 
-#: STATS_CANCORR.py:139
-msgid "A root name for output variables is required if computing scores or saving syntax"
-msgstr ""
-"При вычислении оценок или при сохранении синтаксиса требуется корневое имя для выходных переменных"
-
-#: STATS_CANCORR.py:141
-msgid "A name for the centered dataset is required if scoring or creating scoring syntax"
-msgstr ""
-"При скоринге или при создании синтаксиса скоринга требуется центрированный набор данных"
-
-#: STATS_CANCORR.py:178
-msgid "A scoring variable name appears in the list of input variables"
-msgstr ""
-"В списке выходных переменных присутствует имя переменной скоринга"
-
-#: STATS_CANCORR.py:195
 msgid ""
-"* Calculate canonical scores based on canonical correlations.\n"
+"A root name for output variables is required if computing scores or saving "
 msgstr ""
-"* Вычислить канонические оценки на основе канонических корреляций.\n"
+"При вычислении оценок или при сохранении синтаксиса требуется корневое имя для"
+" выходных переменных"
 
-#: STATS_CANCORR.py:403
-msgid "The requested canonical correlations could not be computed due to singularity or missing data."
+msgid ""
+"A name for the centered dataset is required if scoring or creating scoring "
 msgstr ""
-"Из-за сингулярности или отсутствия данных невозможно вычислить затребованные канонические корреляции."
+"При скоринге или при создании синтаксиса скоринга требуется центрированный "
+"набор данных"
 
-#: STATS_CANCORR.py:418
+msgid "A scoring variable name appears in the list of input variables"
+msgstr "В списке выходных переменных присутствует имя переменной скоринга"
+
+msgid "* Calculate canonical scores based on canonical correlations.\n"
+msgstr "* Вычислить канонические оценки на основе канонических корреляций.\n"
+
+msgid ""
+"The requested canonical correlations could not be computed due to singularity "
+"or missing data."
+msgstr ""
+"Из-за сингулярности или отсутствия данных невозможно вычислить затребованные "
+"канонические корреляции."
+
 msgid "Centered Dataset"
-msgstr ""
-"Центрированный набор данных"
+msgstr "Центрированный набор данных"
 
-#: STATS_CANCORR.py:418
 msgid "Set 1 Variables"
-msgstr ""
-"Переменные набора 1"
+msgstr "Переменные набора 1"
 
-#: STATS_CANCORR.py:418
 msgid "Set 2 Variables"
-msgstr ""
-"Переменные набора 2"
+msgstr "Переменные набора 2"
 
-#: STATS_CANCORR.py:419
 msgid "Correlations Used for Scoring"
-msgstr ""
-"Корреляции, используемые для скоринга"
+msgstr "Корреляции, используемые для скоринга"
 
-#: STATS_CANCORR.py:419
 msgid "Scoring Syntax"
-msgstr ""
-"Синтаксис скоринга"
+msgstr "Синтаксис скоринга"
 
-#: STATS_CANCORR.py:421 STATS_CANCORR.py:422
 msgid "None"
-msgstr ""
-"Нет"
+msgstr "Нет"
 
-#: STATS_CANCORR.py:424
 msgid "Canonical Correlations Settings"
-msgstr ""
-"Параметры канонических корреляций"
+msgstr "Параметры канонических корреляций"
 
-#: STATS_CANCORR.py:425
 msgid "Values"
-msgstr ""
-"Значения"
+msgstr "Значения"
 
-#: STATS_CANCORR.py:428
 msgid "Canonical Correlations"
-msgstr ""
-"Канонические корреляции"
+msgstr "Канонические корреляции"
 
-#: STATS_CANCORR.py:429
-msgid "H0 for Wilks test is that the correlations in the current and following rows are zero"
+msgid ""
+"H0 for Wilks test is that the correlations in the current and following rows "
+"are zero"
 msgstr ""
-"H0 для критерия Уилкса означает, что корреляции в текущей и последующих строках равны нулю"
+"H0 для критерия Уилкса означает, что корреляции в текущей и последующих "
+"строках равны нулю"
 
-#: STATS_CANCORR.py:441
 msgid "Correlation"
-msgstr ""
-"Корреляция"
+msgstr "Корреляция"
 
-#: STATS_CANCORR.py:441
 msgid "Eigenvalue"
-msgstr ""
-"Собственное значение"
+msgstr "Собственное значение"
 
-#: STATS_CANCORR.py:442
 msgid "Denom D.F."
-msgstr ""
-"Знаменатель ст.св."
+msgstr "Знаменатель ст.св."
 
-#: STATS_CANCORR.py:442
 msgid "F"
-msgstr ""
-"F"
+msgstr "F"
 
-#: STATS_CANCORR.py:442
 msgid "Num D.F"
-msgstr ""
-"Числитель ст.св."
+msgstr "Числитель ст.св."
 
-#: STATS_CANCORR.py:442
 msgid "Wilks Statistic"
-msgstr ""
-"Статистика Уилкса"
+msgstr "Статистика Уилкса"
 
-#: STATS_CANCORR.py:443
 msgid "Sig."
-msgstr ""
-"Значимость"
+msgstr "Значимость"
 
-#: STATS_CANCORR.py:447
 msgid "Set 1 Standardized Canonical Correlation Coefficients"
-msgstr ""
-"Стандартизованные коэффициенты канонических корреляций для набора 1"
+msgstr "Стандартизованные коэффициенты канонических корреляций для набора 1"
 
-#: STATS_CANCORR.py:448 STATS_CANCORR.py:454 STATS_CANCORR.py:460
-#: STATS_CANCORR.py:465 STATS_CANCORR.py:472 STATS_CANCORR.py:478
-#: STATS_CANCORR.py:485 STATS_CANCORR.py:491
 msgid "Variable"
-msgstr ""
-"Переменная"
+msgstr "Переменная"
 
-#: STATS_CANCORR.py:453
 msgid "Set 2 Standardized Canonical Correlation Coefficients"
-msgstr ""
-"Стандартизованные коэффициенты канонических корреляций для набора 2"
+msgstr "Стандартизованные коэффициенты канонических корреляций для набора 2"
 
-#: STATS_CANCORR.py:459
 msgid "Set 1 Unstandardized Canonical Correlation Coefficients"
-msgstr ""
-"Нестандартизованные коэффициенты канонических корреляций для набора 1"
+msgstr "Нестандартизованные коэффициенты канонических корреляций для набора 1"
 
-#: STATS_CANCORR.py:464
 msgid "Set 2 Unstandardized Canonical Correlation Coefficients"
-msgstr ""
-"Нестандартизованные коэффициенты канонических корреляций для набора 2"
+msgstr "Нестандартизованные коэффициенты канонических корреляций для набора 2"
 
-#: STATS_CANCORR.py:470
 msgid "Set 1 Canonical Loadings"
-msgstr ""
-"Канонические нагрузки для набора 1"
+msgstr "Канонические нагрузки для набора 1"
 
-#: STATS_CANCORR.py:476
 msgid "Set 2 Canonical Loadings"
-msgstr ""
-"Канонические нагрузки для набора 2"
+msgstr "Канонические нагрузки для набора 2"
 
-#: STATS_CANCORR.py:483
 msgid "Set 1 Cross Loadings"
-msgstr ""
-"Перекрестные нагрузки для набора 1"
+msgstr "Перекрестные нагрузки для набора 1"
 
-#: STATS_CANCORR.py:489
 msgid "Set 2 Cross Loadings"
-msgstr ""
-"Перекрестные нагрузки для набора 2"
+msgstr "Перекрестные нагрузки для набора 2"
 
-#: STATS_CANCORR.py:496
 msgid "Proportion of Variance Explained"
-msgstr ""
-"Объясненная доля дисперсии"
+msgstr "Объясненная доля дисперсии"
 
-#: STATS_CANCORR.py:498
 msgid "Canonical Variable"
-msgstr ""
-"Каноническая переменная"
+msgstr "Каноническая переменная"
 
-#: STATS_CANCORR.py:500
 msgid "Set 1 by Self"
-msgstr ""
-"Набор 1 по самому набору"
+msgstr "Набор 1 по самому набору"
 
-#: STATS_CANCORR.py:500
 msgid "Set 1 by Set 2"
-msgstr ""
-"Набор 1 по набору 2"
+msgstr "Набор 1 по набору 2"
 
-#: STATS_CANCORR.py:501
 msgid "Set 2 by Self"
-msgstr ""
-"Набор 2 по самому набору"
+msgstr "Набор 2 по самому набору"
 
-#: STATS_CANCORR.py:501
 msgid "Set 2 by Set 1"
-msgstr ""
-"Набор 2 по набору 1"
+msgstr "Набор 2 по набору 1"
 
-#: STATS_CANCORR.py:546
 msgid "The specified root name is too long: %s"
-msgstr ""
-"Заданное корневое имя слишком длинное: %s"
+msgstr "Заданное корневое имя слишком длинное: %s"
 
-#: STATS_CANCORR.py:582
 msgid "---"
-msgstr ""
-"---"
+msgstr "---"
 
-#: STATS_CANCORR.py:634
 msgid "Create dummy variables"
-msgstr ""
-"Создать фиктивные переменные"
-
-
-
+msgstr "Создать фиктивные переменные"

@@ -1,0 +1,88 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Compute Canonical Correlations</title>
+<STYLE TYPE="text/css"> 
+<!-- 
+
+H1 {font-weight:bold; color:#006699; font-size:125%; }
+H2 {font-weight:bold; color:#006699; font-size:110%; }
+BODY {font-size:80%; }
+TABLE {font-size:100%;}
+
+/* paragraph tags */
+.step {text-indent: -1.3em; margin-left:1.3em; margin-top: 0px;}
+.step-glyph {  }
+.menuselection {margin-left:10px}
+.bullet {list-style-type: disc;margin-top:12px; margin-left:36px; text-indent:-1em; }
+.codeblock {background-color: #ffffe6; display:block; margin-left:5px; padding:5px; }
+
+/* inline tags */
+.code {}                           /*** used to tag pieces of code (syntax, Python, R, HTML, etc.)   ***/
+.screen {font-weight:bold; color:#408080}                       /*** used refer to on-screen text ***/
+.name {font-style: italic}                                                       /*** used to tag names, such as variable names, file names, and so forth ***/
+.runinhead {font-weight: bold} 
+.superscript {vertical-align:super; font-size:80%}
+.subscript {vertical-align:sub; font-size:80%}
+.symbol {}
+
+--> 
+</STYLE>
+</head>
+<body>
+<h1>Compute Canonical Correlations</h1>
+This procedure computes canonical correlations and related statistics
+for two sets of variables.  Optionally it can score the data, and it
+can produce a syntax file that can be used with new data.
+<p>
+
+<p><span class="runinhead">Set 1</span> 
+Select the first set of variables for the correlations.
+</p>
+<p><span class="runinhead">Set 2</span> 
+Select the second set of variables for the correlations.
+</p>
+
+<h2>Options</h2>
+<p>This dialog specifies what output is displayed and the
+scoring behavior.</p>
+
+<p><span class="runinhead">Rootname for Score Variables</span> Enter
+a prefix for the names of the generated score variables.
+<p class="bullet">&bull; If either scoring or creating a syntax
+file for scoring is selected, a rootname is required.</p>
+<p><span class="runinhead">Scores</span> Check the box and
+specify a dataset name in order to create a dataset of scores.
+The dataset will contain the centered variables and the scores.</p>
+<p><span class="runinhead">Scoring Syntax File</span> Check the box
+and select an output file specification
+to create a syntax file containing the commands for scoring
+a dataset.  The syntax centers the data and then calculates scores
+for both sets of variables.</p>
+<p class="bullet">&bull; The syntax expects the same variable names
+as were used for computing the correlations.
+
+<p><span class="runinhead">Scoring Dimension Limit</span> By
+default all the correlations are used for scoring.  You can specify
+a smaller limit by checking the box and entering the number of
+canonical correlations to use.</p>
+
+<p><span class="runinhead">Display</span> Check the boxes for the desired output.
+The pairwise correlations are the same as would be produced by running the Correlations
+procedure with listwise missing value deletion.  A table of correlations and tests
+is always produced.</p>
+
+<h2>Additional Features</h2>
+<p>
+This dialog generates syntax for the STATS CANCORR extension command. To display syntax help for this command,
+run the following syntax:
+</p>
+<p class="codeblock">STATS CANCORR /HELP.</p>
+
+<h2>Requirements</h2>
+This command requires the Python Essentials
+You can download these via the SPSS Community website at www.ibm.com/developerworks/spssdevcentral
+or from your installation materials.
+

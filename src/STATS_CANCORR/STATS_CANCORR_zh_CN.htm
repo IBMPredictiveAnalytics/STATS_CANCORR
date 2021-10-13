@@ -1,0 +1,67 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+
+<title>计算典型相关性</title>
+<STYLE TYPE="text/css"> 
+<!-- 
+
+H1 {font-weight:bold; color:#006699; font-size:125%; }
+H2 {font-weight:bold; color:#006699; font-size:110%; }
+BODY {font-size:80%; }
+TABLE {font-size:100%;}
+
+/* paragraph tags */
+.step {text-indent: -1.3em; margin-left:1.3em; margin-top: 0px;}
+.step-glyph {  }
+.menuselection {margin-left:10px}
+.bullet {list-style-type: disc;margin-top:12px; margin-left:36px; text-indent:-1em; }
+.codeblock {background-color: #ffffe6; display:block; margin-left:5px; padding:5px; }
+
+/* inline tags */
+.code {}                           /*** used to tag pieces of code (syntax, Python, R, HTML, etc.)   ***/
+.screen {font-weight:bold; color:#408080}                       /*** used refer to on-screen text ***/
+.name {font-style: italic}                                                       /*** used to tag names, such as variable names, file names, and so forth ***/
+.runinhead {font-weight: bold} 
+.superscript {vertical-align:super; font-size:80%}
+.subscript {vertical-align:sub; font-size:80%}
+.symbol {}
+
+--> 
+</STYLE>
+</head>
+<body>
+<h1>计算典型相关性</h1>
+此过程计算两组变量的典型相关性和相关统计信息。（可选）它可以对数据进行评分，并且可以生成能够与新数据配合使用的语法文件。
+<p>
+
+<p><span class="runinhead">集合 1</span> 选择第一组相关性变量。
+</p>
+<p><span class="runinhead">集合 2</span> 选择第二组相关性变量。
+</p>
+
+<h2>选项</h2>
+<p>此对话框指定将显示的输出以及评分行为。</p>
+
+<p><span class="runinhead">得分变量的根名</span> 输入生成的得分变量的名称的前缀。
+<p class="bullet">&bull; 如果选择了评分或创建用于评分的语法文件，那么根名必需。</p>
+<p><span class="runinhead">得分</span> 选中此框并指定数据集名称以创建得分数据集。
+此数据集将包含居中变量和得分。</p>
+<p><span class="runinhead">评分语法文件</span> 选中此框并选择输入文件指定项以创建语法文件，此文件包含用于对数据集进行评分的命令。语法将使数据居中，然后计算两组变量的得分。</p>
+<p class="bullet">&bull; 语法期望变量名称与用于计算相关性的变量相同。
+<p><span class="runinhead">对维限制进行评分</span> 缺省情况下，所有相关性将用于评分。您可以通过选中此框并输入要使用的典型相关性的数目来指定较小限制。</p>
+
+<p><span class="runinhead">显示</span> 选中所需输出对应的框。
+成对相关性与通过运行具有成列缺失值删除的“相关性”过程而生成的相关性相同。将始终生成相关性和检验表。</p>
+
+<h2>其他功能部件</h2>
+<p>
+此对话框将生成 STATS CANCORR 扩展命令的语法。要显示此命令的语法帮助，请运行以下语法：</p>
+<p class="codeblock">STATS CANCORR /HELP。</p>
+
+<h2>要求</h2>
+此命令需要 Python Essentials
+您可以通过 SPSS Community Web 站点 (www.ibm.com/developerworks/spssdevcentral) 下载或通过安装材料获取。
+

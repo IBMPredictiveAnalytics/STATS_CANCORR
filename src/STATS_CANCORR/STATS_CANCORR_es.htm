@@ -1,0 +1,67 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Calcular correlaciones canónicas</title>
+<STYLE TYPE="text/css"> 
+<!-- 
+
+H1 {font-weight:bold; color:#006699; font-size:125%; }
+H2 {font-weight:bold; color:#006699; font-size:110%; }
+BODY {font-size:80%; }
+TABLE {font-size:100%;}
+
+/* paragraph tags */
+.step {text-indent: -1.3em; margin-left:1.3em; margin-top: 0px;}
+.step-glyph {  }
+.menuselection {margin-left:10px}
+.bullet {list-style-type: disc;margin-top:12px; margin-left:36px; text-indent:-1em; }
+.codeblock {background-color: #ffffe6; display:block; margin-left:5px; padding:5px; }
+
+/* inline tags */
+.code {}                           /*** used to tag pieces of code (syntax, Python, R, HTML, etc.)   ***/
+.screen {font-weight:bold; color:#408080}                       /*** used refer to on-screen text ***/
+.name {font-style: italic}                                                       /*** used to tag names, such as variable names, file names, and so forth ***/
+.runinhead {font-weight: bold} 
+.superscript {vertical-align:super; font-size:80%}
+.subscript {vertical-align:sub; font-size:80%}
+.symbol {}
+
+--> 
+</STYLE>
+</head>
+<body>
+<h1>Calcular correlaciones canónicas</h1>
+Esta procedimiento calcula las correlaciones canónicas y los estadísticos relacionados de dos conjuntos de variables.  Opcionalmente, puede puntuar los datos y producir un archivo de sintaxis que se puede utilizar con datos nuevos.
+<p>
+
+<p><span class="runinhead">Conjunto 1</span> Seleccione el primer conjunto de variables para las correlaciones.
+</p>
+<p><span class="runinhead">Conjunto 2</span> Seleccione el segundo conjunto de variables para las correlaciones.
+</p>
+
+<h2>Opciones</h2>
+<p>Este diálogo especifica el resultado que se visualizará y el comportamiento de puntuación.</p>
+
+<p><span class="runinhead">Nombre raíz para las variables de puntuación</span> Especifique un prefijo para los nombres de las variables de puntuación generadas.
+<p class="bullet">&bull; Si se selecciona puntuación o crear un archivo de sintaxis para puntuación, se requiere un nombre raíz.</p>
+<p><span class="runinhead">Puntuaciones</span> Marque el recuadro y especifique un nombre de conjunto de datos para crear un conjunto de datos de puntuaciones.
+El conjunto de datos contendrá las variables centradas y las puntuaciones.</p>
+<p><span class="runinhead">Archivo de sintaxis para puntuación</span> Marque este recuadro y seleccione una especificación de archivo de salida para crear un archivo de sintaxis que contenga los comandos para puntuar un conjunto de datos.  La sintaxis centra los datos y después calcula las puntuaciones para los dos conjuntos de variables.</p>
+<p class="bullet">&bull; La sintaxis espera los mismos nombres de variables que se han utilizado para calcular las correlaciones.
+
+<p><span class="runinhead">Límite de dimensión de puntuación</span> De forma predeterminada, todas las correlaciones se utilizan para la puntuación.  Puede especificar un límite menor marcando el recuadro y especificando el número de correlaciones canónicas a utilizar.</p>
+
+<p><span class="runinhead">Mostrar</span> Marque los recuadros según el resultado que desee obtener.
+Las correlaciones por parejas son las mismas que se producirían ejecutando el procedimiento Correlaciones con supresión de valores perdidos por orden de lista.  Siempre se genera una tabla de correlaciones y pruebas.</p>
+
+<h2>Características adicionales</h2>
+<p>
+Este diálogo genera sintaxis para el comando de extensión STATS CANCORR. Para mostrar la ayuda de sintaxis de este comando, ejecute la siguiente sintaxis:
+</p>
+<p class="codeblock">STATS CANCORR /HELP.</p>
+
+<h2>Requisitos</h2>
+Este comando requiere Python Essentials. Puede descargarlos del sitio web de la Comunidad de SPSS, en www.ibm.com/developerworks/spssdevcentral o de los materiales de instalación.
+
