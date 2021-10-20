@@ -1,0 +1,69 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <title>計算正準相關性</title>
+<STYLE TYPE="text/css"> 
+<!-- 
+
+H1 {font-weight:bold; color:#006699; font-size:125%; }
+H2 {font-weight:bold; color:#006699; font-size:110%; }
+BODY {font-size:80%; }
+TABLE {font-size:100%;}
+
+/* paragraph tags */
+.step {text-indent: -1.3em; margin-left:1.3em; margin-top: 0px;}
+.step-glyph {  }
+.menuselection {margin-left:10px}
+.bullet {list-style-type: disc;margin-top:12px; margin-left:36px; text-indent:-1em; }
+.codeblock {background-color: #ffffe6; display:block; margin-left:5px; padding:5px; }
+
+/* inline tags */
+.code {}                           /*** used to tag pieces of code (syntax, Python, R, HTML, etc.)   ***/
+.screen {font-weight:bold; color:#408080}                       /*** used refer to on-screen text ***/
+.name {font-style: italic}                                                       /*** used to tag names, such as variable names, file names, and so forth ***/
+.runinhead {font-weight: bold} 
+.superscript {vertical-align:super; font-size:80%}
+.subscript {vertical-align:sub; font-size:80%}
+.symbol {}
+
+--> 
+</STYLE>
+</head>
+<body>
+<h1>計算正準相關性</h1>
+此程序會計算兩組變數的正準相關性及相關統計資料。選擇性地，它可以對資料評分，還可以產生可與新資料搭配使用的語法檔案。
+<p>
+
+<p><span class="runinhead">第 1 組</span>
+選取相關性的第一組變數。
+</p>
+<p><span class="runinhead">第 2 組</span>
+選取相關性的第二組變數。
+</p>
+
+<h2>選項</h2>
+<p>此對話框指定顯示的輸出及評分行為。</p>
+
+<p><span class="runinhead">評分變數的根名稱</span> 輸入所產生評分變數的名稱的字首。
+<p class="bullet">&bull; 如果選取評分或為評分建立語法檔案，則需要根名稱。</p>
+<p><span class="runinhead">評分</span> 勾選此方框，並指定資料集名稱，以建立評分的資料集。
+資料集將包含置中的變數及評分。</p>
+<p><span class="runinhead">評分語法檔案</span> 勾選此方框，並選取輸出檔規格，以建立包含用於對資料集評分的指令的語法檔案。此語法會將資料置中，然後計算兩組變數的評分。</p>
+<p class="bullet">&bull; 此語法預期變數名稱與用於計算相關性的變數名稱相同。
+
+<p><span class="runinhead">評分維度限制</span> 依預設，所有相關性都用於評分。您可以勾選此方框，並輸入要使用的正準相關性數目，來指定較小的限制。</p>
+
+<p><span class="runinhead">顯示</span> 針對所需的輸出勾選方框。
+配對相關性與執行「相關性」程序並刪除整批遺漏值產生的相關性相同。系統會一律產生相關性及檢定的表格。</p>
+
+<h2>其他特性</h2>
+<p>
+此對話框會產生 STATS CANCORR 延伸指令的語法。若要顯示此指令的語法說明，請執行下列語法：</p>
+<p class="codeblock">STATS CANCORR /HELP.</p>
+
+<h2>需求</h2>
+此指令需要 Python Essentials。
+您可以從 SPSS 社群網站 (www.ibm.com/developerworks/spssdevcentral) 或安裝資料下載它們。
+

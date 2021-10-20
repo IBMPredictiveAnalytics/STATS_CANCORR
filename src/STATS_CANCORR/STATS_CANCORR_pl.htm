@@ -1,0 +1,67 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Oblicz korelacje kanoniczne</title>
+<STYLE TYPE="text/css"> 
+<!-- 
+
+H1 {font-weight:bold; color:#006699; font-size:125%; }
+H2 {font-weight:bold; color:#006699; font-size:110%; }
+BODY {font-size:80%; }
+TABLE {font-size:100%;}
+
+/* paragraph tags */
+.step {text-indent: -1.3em; margin-left:1.3em; margin-top: 0px;}
+.step-glyph {  }
+.menuselection {margin-left:10px}
+.bullet {list-style-type: disc;margin-top:12px; margin-left:36px; text-indent:-1em; }
+.codeblock {background-color: #ffffe6; display:block; margin-left:5px; padding:5px; }
+
+/* inline tags */
+.code {}                           /*** used to tag pieces of code (syntax, Python, R, HTML, etc.)   ***/
+.screen {font-weight:bold; color:#408080}                       /*** used refer to on-screen text ***/
+.name {font-style: italic}                                                       /*** used to tag names, such as variable names, file names, and so forth ***/
+.runinhead {font-weight: bold} 
+.superscript {vertical-align:super; font-size:80%}
+.subscript {vertical-align:sub; font-size:80%}
+.symbol {}
+
+--> 
+</STYLE>
+</head>
+<body>
+<h1>Oblicz korelacje kanoniczne</h1>
+Za pomocą tej procedury można obliczyć korelacje kanoniczne i powiązane statystyki dwóch zbiorów zmiennych.  Opcjonalnie można utworzyć oceny danych oraz plik komendy, którego można użyć w przypadku nowych danych.
+<p>
+
+<p><span class="runinhead">Zbiór 1</span> Wybierz pierwszy zbiór zmiennych z przeznaczeniem do użycia w korelacjach.
+</p>
+<p><span class="runinhead">Zbiór 2</span> Wybierz drugi zbiór zmiennych z przeznaczeniem do użycia w korelacjach.
+</p>
+
+<h2>Opcje</h2>
+<p>W tym oknie dialogowym określone są wyświetlane dane wyjściowe i zachowanie oceniania.</p>
+
+<p><span class="runinhead">Trzon nazwy zmiennych ocen</span> Wprowadź przedrostek nazw wygenerowanych zmiennych ocen.
+<p class="bullet">&bull; Trzon nazwy jest wymagany w przypadku wybrania oceny lub utworzenia pliku komendy w celu wykonania oceny.</p>
+<p><span class="runinhead">Oceny</span> Zaznacz to pole wyboru i określ nazwę zbioru danych, aby utworzyć zbiór danych ocen.
+Zbiór danych będzie obejmować centrowane zmienne i oceny.</p>
+<p><span class="runinhead">Plik komendy oceny</span> Zaznacz to pole wyboru i wybierz specyfikację pliku danych wyjściowych, aby utworzyć plik komendy zawierający komendy używane w przypadku oceniania zbioru danych.  Komenda centruje dane i oblicza oceny w przypadku obydwu zbiorów zmiennych.</p>
+<p class="bullet">&bull; W przypadku komendy oczekiwane jest użycie tych samych nazw, jak podczas obliczania korelacji.
+
+<p><span class="runinhead">Granica wymiaru oceny</span> Domyślnie podczas oceny używane są wszystkie korelacje.  Można określić mniejsza granicę, zaznaczając to pole wyboru i wprowadzając liczbę korelacji kanonicznych, które zostaną użyte.</p>
+
+<p><span class="runinhead">Wyświetl</span> Zaznacz pola wyboru dotyczące żądnych danych wyjściowych.
+Korelacje parami są takie same, jak w przypadku utworzenia za pomocą procedury Korelacje z usunięciem brakujących wartości wg listy.  Zawsze tworzona jest tabela korelacji i testów.</p>
+
+<h2>Funkcje dodatkowe</h2>
+<p>
+Za pomocą tego okna dialogowego można utworzyć składnię komendy rozszerzającej STATS CANCORR. Aby wyświetlić pomoc dotyczącą tej komendy, uruchom następującą komendę:
+</p>
+<p class="codeblock">STATS CANCORR /HELP.</p>
+
+<h2>Wymagania</h2>
+Ta komenda wymaga dodatku Python Essentials. Dodatek można pobrać za pomocą witryny SPSS Community dostępnej pod adresem www.ibm.com/developerworks/spssdevcentral lub z materiałów instalacyjnych.
+

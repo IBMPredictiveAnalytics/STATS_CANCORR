@@ -1,0 +1,67 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Calcular correlações canônicas</title>
+<STYLE TYPE="text/css"> 
+<!-- 
+
+H1 {font-weight:bold; color:#006699; font-size:125%; }
+H2 {font-weight:bold; color:#006699; font-size:110%; }
+BODY {font-size:80%; }
+TABLE {font-size:100%;}
+
+/* paragraph tags */
+.step {text-indent: -1.3em; margin-left:1.3em; margin-top: 0px;}
+.step-glyph {  }
+.menuselection {margin-left:10px}
+.bullet {list-style-type: disc;margin-top:12px; margin-left:36px; text-indent:-1em; }
+.codeblock {background-color: #ffffe6; display:block; margin-left:5px; padding:5px; }
+
+/* inline tags */
+.code {}                           /*** used to tag pieces of code (syntax, Python, R, HTML, etc.)   ***/
+.screen {font-weight:bold; color:#408080}                       /*** used refer to on-screen text ***/
+.name {font-style: italic}                                                       /*** used to tag names, such as variable names, file names, and so forth ***/
+.runinhead {font-weight: bold} 
+.superscript {vertical-align:super; font-size:80%}
+.subscript {vertical-align:sub; font-size:80%}
+.symbol {}
+
+--> 
+</STYLE>
+</head>
+<body>
+<h1>Calcular correlações canônicas</h1>
+Este procedimento calcula correlações canônico e estatísticas relacionadas para dois conjuntos de variáveis.  Opcionalmente, ele pode escorar os dados e produzir um arquivo de sintaxe que pode ser usado com novos dados.
+<p>
+
+<p><span class="runinhead">Conjunto 1</span> Selecione o primeiro conjunto de variáveis para as correlações.
+</p>
+<p><span class="runinhead">Conjunto 2</span> Selecione o segundo conjunto de variáveis para as correlações.
+</p>
+
+<h2>Opções</h2>
+<p>Este diálogo especifica qual saída é exibida e o comportamento de escoragem.</p>
+
+<p><span class="runinhead">Nome raiz para variáveis de escore</span> Insira um prefixo para os nomes das variáveis de escore geradas.
+<p class="bullet">&bull; Se escoragem ou criar um arquivo de sintaxe para escoragem for selecionado, um  nome raiz é necessário.</p>
+<p><span class="runinhead">Escores</span> Marque a caixa e especifique um nome de conjunto de dados para criar um conjunto de dados de escores.
+O conjunto de dados irá conter as variáveis centralizadas e os escores.</p>
+<p><span class="runinhead">Arquivo de sintaxe de escoragem</span> Marque a caixa e selecione uma especificação de arquivo de saída para criar um arquivo de sintaxe que contém os comandos para escoragem de um conjunto de dados.  A sintaxe centraliza os dados e, em seguida, calcula escores para ambos os conjuntos de variáveis.</p>
+<p class="bullet">&bull; A sintaxe espera os mesmos nomes de variáveis que foram usados para calcular as correlações.
+
+<p><span class="runinhead">Limite de dimensão de escoragem</span> Por padrão, todas as correlações são usadas para escoragem.  É possível especificar um limite menor marcando a caixa e inserindo o número de correlações canônicas para usar.</p>
+
+<p><span class="runinhead">Exibir</span> Marque as caixas para a saída desejada.
+As correlações de pares são as mesmas que seriam produzidas pela execução do procedimento Correlações com exclusão de valor omisso de lista.  Uma tabela de correlações e testes sempre é produzida.</p>
+
+<h2>Recursos adicionais</h2>
+<p>
+Este diálogo gera sintaxe para o comando de extensão STATS CANCORR. Para exibir ajuda de sintaxe para este comando, execute a seguinte sintaxe:
+</p>
+<p class="codeblock">STATS CANCORR /HELP.</p>
+
+<h2>Requisitos</h2>
+Este comando requer o Python Essentials. É possível fazer download dele por meio do website SPSS Community em www.ibm.com/developerworks/spssdevcentral ou de seus materiais de instalação.
+

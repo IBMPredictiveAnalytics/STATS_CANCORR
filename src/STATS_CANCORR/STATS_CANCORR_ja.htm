@@ -1,0 +1,68 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+
+  <title>正準相関の計算</title>
+<STYLE TYPE="text/css"> 
+<!-- 
+
+H1 {font-weight:bold; color:#006699; font-size:125%; }
+H2 {font-weight:bold; color:#006699; font-size:110%; }
+BODY {font-size:80%; }
+TABLE {font-size:100%;}
+
+/* paragraph tags */
+.step {text-indent: -1.3em; margin-left:1.3em; margin-top: 0px;}
+.step-glyph {  }
+.menuselection {margin-left:10px}
+.bullet {list-style-type: disc;margin-top:12px; margin-left:36px; text-indent:-1em; }
+.codeblock {background-color: #ffffe6; display:block; margin-left:5px; padding:5px; }
+
+/* inline tags */
+.code {}                           /*** used to tag pieces of code (syntax, Python, R, HTML, etc.)   ***/
+.screen {font-weight:bold; color:#408080}                       /*** used refer to on-screen text ***/
+.name {font-style: italic}                                                       /*** used to tag names, such as variable names, file names, and so forth ***/
+.runinhead {font-weight: bold} 
+.superscript {vertical-align:super; font-size:80%}
+.subscript {vertical-align:sub; font-size:80%}
+.symbol {}
+
+--> 
+</STYLE>
+</head>
+<body>
+<h1>正準相関の計算</h1>
+この手順では、2 つの変数グループの正準相関および関連する統計値を計算します。オプションとして、データをスコアリングできるほか、新規のデータで使用できるシンタックス ファイルを作成できます。
+<p>
+
+<p><span class="runinhead">グループ 1:</span> 相関の一方の変数グループを選択します。
+</p>
+<p><span class="runinhead">グループ 2:</span> 相関のもう一方の変数グループを選択します。
+</p>
+
+<h2>オプション</h2>
+<p>このダイアログでは、表示する出力やスコアリング動作を指定します。</p>
+
+<p><span class="runinhead">スコア変数のルート名:</span> 生成されるスコア変数の名前に付加する接頭辞を入力します。
+<p class="bullet">&bull; スコアリングを行う場合、またはスコアリング用のシンタックス ファイルの作成を行う場合は、ルート名が必要です。</p>
+<p><span class="runinhead">スコア:</span> スコアのデータセットを作成するには、このボックスにチェック マークを付け、データセット名を指定します。
+データセットには、中心化された変数とスコアが含まれることになります。</p>
+<p><span class="runinhead">スコアリング シンタックス ファイル:</span> データセットをスコアリングするためのコマンドを含んだシンタックス ファイルを作成するには、このボックスにチェック マークを付けて出力ファイルの仕様を選択します。シンタックスでは、データを中心化し、両方の変数グループのスコアを計算します。</p>
+<p class="bullet">&bull; シンタックスでは、相関の計算に使用されたものと同じ変数名を使用する必要があります。
+
+<p><span class="runinhead">スコアリング次元の制限:</span> デフォルトでは、すべての相関がスコアリングに使用されます。このボックスにチェック マークを付け、使用する正準相関の数を入力することで、制限を高めることができます。</p>
+
+<p><span class="runinhead">表示:</span> 必要な出力に対してこのボックスにチェック マークを付けます。
+ペアごとの相関係数は、リストごとの欠損値削除で相関手順を実行して生成されるものと同じです。相関と検定のテーブルが常に生成されます。</p>
+
+<h2>その他の機能</h2>
+<p>
+このダイアログは、STATS CANCORR 拡張コマンドのシンタックスを生成します。このコマンドのシンタックスのヘルプを表示するには、次のシンタックスを実行します。</p>
+<p class="codeblock">STATS CANCORR /HELP.</p>
+
+<h2>要件</h2>
+このコマンドには Python Essentials が必要です。
+Python Essentials は SPSS Community Web サイト (www.ibm.com/developerworks/spssdevcentral) からダウンロードできるほか、インストール資料にも収録されています。
+

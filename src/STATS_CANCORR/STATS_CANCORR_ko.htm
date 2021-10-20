@@ -1,0 +1,82 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>정준 상관 계산</title>
+<STYLE TYPE="text/css"> 
+<!-- 
+
+H1 {font-weight:bold; color:#006699; font-size:125%; }
+H2 {font-weight:bold; color:#006699; font-size:110%; }
+BODY {font-size:80%; }
+TABLE {font-size:100%;}
+
+/* paragraph tags */
+.step {text-indent: -1.3em; margin-left:1.3em; margin-top: 0px;}
+.step-glyph {  }
+.menuselection {margin-left:10px}
+.bullet {list-style-type: disc;margin-top:12px; margin-left:36px; text-indent:-1em; }
+.codeblock {background-color: #ffffe6; display:block; margin-left:5px; padding:5px; }
+
+/* inline tags */
+.code {}                           /*** used to tag pieces of code (syntax, Python, R, HTML, etc.)   ***/
+.screen {font-weight:bold; color:#408080}                       /*** used refer to on-screen text ***/
+.name {font-style: italic}                                                       /*** used to tag names, such as variable names, file names, and so forth ***/
+.runinhead {font-weight: bold} 
+.superscript {vertical-align:super; font-size:80%}
+.subscript {vertical-align:sub; font-size:80%}
+.symbol {}
+
+--> 
+</STYLE>
+</head>
+<body>
+<h1>정준 상관 계산</h1>
+이 프로시저는 두 변수군의 정준 상관 및 관련 통계를
+계산합니다. 필요한 경우 데이터를 점수화할 수 있으며
+새 데이터와 함께 사용할 수 있는 명령문 파일을 생성할 수 있습니다.
+<p>
+
+<p><span class="runinhead">변수군 1</span>
+상관관계에 대한 첫 번째 변수군을 선택하십시오.
+</p>
+<p><span class="runinhead">변수군 2</span>
+상관관계에 대한 두 번째 변수군을 선택하십시오.
+</p>
+
+<h2>옵션</h2>
+<p>이 대화 상자는 표시되는 출력과
+점수화 동작을 지정합니다.</p>
+
+<p><span class="runinhead">점수 변수의 루트 이름</span> 생성된
+점수 변수 이름에 대한 접두문자를 입력하십시오.
+<p class="bullet">&bull; 점수화 또는 점수화를 위한 명령문 파일의 작성을
+선택할 경우 루트 이름이 필요합니다.</p>
+<p><span class="runinhead">점수</span> 소스의 데이터 세트를 작성하려면
+이 상자를 선택하고 데이터 세트 이름을 지정하십시오.
+데이터 세트에는 중앙화 변수 및 점수가 포함됩니다.</p>
+<p><span class="runinhead">점수화 명령문 파일</span> 데이터 세트를 점수화하기 위한 명령문을 포함하는
+명령문 파일을 작성하려면 이 상자를 선택하고
+출력 파일 지정을 선택하십시오. 명령문은 데이터를 중앙화한 다음 두 변수군 모두에 대해
+점수를 계산합니다.</p>
+<p class="bullet">&bull; 명령문은 상관관계 계산에 사용되었던 것과
+동일한 변수 이름을 기대합니다. <p><span class="runinhead">점수화 차원 한계</span> 기본적으로 점수화에는
+모든 상관관계가 사용됩니다. 상자를 선택하고
+사용할 정준 상관의 수를 입력하여
+더 작은 한계를 지정할 수 있습니다.</p>
+
+<p><span class="runinhead">표시</span> 원하는 출력에 해당하는 상자를 선택하십시오.
+대응별 계수는 목록별 결측값 삭제와 함께 상관 프로시저를 실행하여 생성된 계수와 같습니다. 상관 및 검정 표는 항상 생성됩니다.</p>
+
+<h2>추가 기능</h2>
+<p>
+이 대화 상자는 STATS CANCORR 확장 명령에 대한 구문을 생성합니다. 이 명령에 대한 명령문 도움말을 표시하려면 다음 명령문을 실행하십시오:
+</p>
+<p class="codeblock">STATS CANCORR /HELP.</p>
+
+<h2>요구 사항</h2>
+이 명령문에는 Python Essentials가 필요합니다.
+Python Essentials는 www.ibm.com/developerworks/spssdevcentral의
+SPSS Community 웹 사이트 또는 설치 자료에서 다운로드할 수 있습니다. 
+

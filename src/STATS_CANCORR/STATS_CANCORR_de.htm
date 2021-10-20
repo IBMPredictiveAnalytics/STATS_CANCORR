@@ -1,0 +1,82 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Kanonische Korrelationen berechnen</title>
+<STYLE TYPE="text/css"> 
+<!-- 
+
+H1 {font-weight:bold; color:#006699; font-size:125%; }
+H2 {font-weight:bold; color:#006699; font-size:110%; }
+BODY {font-size:80%; }
+TABLE {font-size:100%;}
+
+/* paragraph tags */
+.step {text-indent: -1.3em; margin-left:1.3em; margin-top: 0px;}
+.step-glyph {  }
+.menuselection {margin-left:10px}
+.bullet {list-style-type: disc;margin-top:12px; margin-left:36px; text-indent:-1em; }
+.codeblock {background-color: #ffffe6; display:block; margin-left:5px; padding:5px; }
+
+/* inline tags */
+.code {}                           /*** used to tag pieces of code (syntax, Python, R, HTML, etc.)   ***/
+.screen {font-weight:bold; color:#408080}                       /*** used refer to on-screen text ***/
+.name {font-style: italic}                                                       /*** used to tag names, such as variable names, file names, and so forth ***/
+.runinhead {font-weight: bold} 
+.superscript {vertical-align:super; font-size:80%}
+.subscript {vertical-align:sub; font-size:80%}
+.symbol {}
+
+--> 
+</STYLE>
+</head>
+<body>
+<h1>Kanonische Korrelationen berechnen</h1>
+Diese Prozedur berechnet kanonische Korrelationen und zugehörige Statistiken
+für zwei Variablensets.  Optional kann mit ihr ein Scoring der Daten durchgeführt und
+eine Syntaxdatei erstellt werden, die bei neuen Daten verwendet werden kann.
+<p>
+
+<p><span class="runinhead">Set 1</span>
+Wählen Sie das erste Variablenset für die Korrelationen aus.
+</p>
+<p><span class="runinhead">Set 2</span>
+Wählen Sie das zweite Variablenset für die Korrelationen aus.
+</p>
+
+<h2>Optionen</h2>
+<p>In diesem Dialogfeld wird die Ausgabe, die angezeigt werden soll, und
+das Scoring-Verhalten angegeben.</p>
+
+<p><span class="runinhead">Stammname für Scorevariablen</span> Geben Sie
+ein Präfix für die Namen der generierten Scorevariablen ein.
+<p class="bullet">&bull; Wenn die Durchführung eines Scorings oder die Erstellung einer Syntaxdatei
+für ein Scoring ausgewählt wurde, ist ein Stammname erforderlich.</p>
+<p><span class="runinhead">Scores</span> Wählen Sie das Feld aus und
+geben Sie einen Datasetnamen an, um ein Dataset mit Scores zu erstellen.
+Das Dataset wird die zentrierten Variablen und die Scores enthalten.</p>
+<p><span class="runinhead">Scoring-Syntaxdatei</span> Wählen Sie das Feld
+und eine Ausgabedateispezifikation aus,
+um eine Syntaxdatei zu erstellen, die die Befehle für das Scoring
+eines Datasets enthält.  Die Syntax zentriert die Daten und berechnet anschließend die Scores
+für beide Variablensets.</p>
+<p class="bullet">&bull; Die Syntax erwartet dieselben Variablennamen,
+die auch bei der Berechnung der Korrelationen verwendet wurden.
+
+<p><span class="runinhead">Grenzwert für Scoring-Dimensionen</span>
+Standardmäßig werden beim Scoring alle Korrelationen verwendet.  Durch Auswahl des Felds
+und Eingabe der Anzahl der zu verwendenden kanonischen Korrelationen kann ein kleinerer Grenzwert festgelegt werden.</p>
+
+<p><span class="runinhead">Anzeige</span> Wählen Sie die Felder für die gewünschte Ausgabe aus.
+Bei den paarweisen Korrelationen handelt es sich um dieselben, die auch durch Ausführen der Prozedur für Korrelationen mit listenweisem Ausschluss fehlender Werte generiert würden.  Dabei wird immer eine Tabelle mit Korrelationen und Tests erstellt.</p>
+
+<h2>Weitere Funktionen</h2>
+<p>
+Über dieses Dialogfeld wird Syntax für den Erweiterungsbefehl STATS CANCORR generiert. Führen Sie den folgenden Befehl aus, um die Syntaxhilfe für diesen Befehl anzuzeigen:
+</p>
+<p class="codeblock">STATS CANCORR /HELP.</p>
+
+<h2>Anforderungen</h2>
+Für diesen Befehl ist Python Essentials erforderlich. Sie können Python Essentials von der SPSS Community-Website (www.ibm.com/developerworks/spssdevcentral) oder über Ihr Installationsmaterial herunterladen.
+
