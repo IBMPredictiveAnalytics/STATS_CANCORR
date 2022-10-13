@@ -1,4 +1,5 @@
 Name: STATS CANCORR
+Display-Name: Canonical correlation analysis
 Dialog-Specs: STATS_CANCORR.spd
 Command-Specs: STATS_CANCORR.xml
 Code-Files: STATS_CANCORR.py
